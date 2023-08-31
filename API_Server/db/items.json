@@ -1,0 +1,21 @@
+[
+  { "Name": "Bottega Venetta", "Price": "$500", "Size": "Small", "id": 1 },
+  {
+    "Name": "Prada Vintage Loafers",
+    "Price": "$300",
+    "Size": "Medium",
+    "id": 2
+  },
+  { "Name": "Dr Marten boot", "Price": "$800", "Size": "Small", "id": 3 },
+  { "Name": "Crocs", "Price": "$80", "Size": "Big", "id": 4 },
+  { "Name": "Puma Sneaks", "Price": "$100", "Size": "Meduim", "id": 5 },
+  { "Name": "Asos", "Price": "$130", "Size": "Small", "id": 6 },
+  {
+    "Name": "TimberLand Low Boots",
+    "Price": "$130",
+    "Size": "Small",
+    "id": 7,
+    "price": "$140"
+  },
+  { "Name": "NorthFace", "Price": "$250", "Size": "Big", "id": 8 }
+]
