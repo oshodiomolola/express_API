@@ -9,8 +9,8 @@ function createUser(req, res) {
   newUser.api_key = `${newUser.username}_${newUser.password}`
 
   if(newUser.username === "lola") {
-    newUser.role = "admin"
-  } else newUser.role = "customer"
+    newUser.user_type = "admin"
+  } else newUser.user_type = "customer"
 
   userObj.push(newUser)
 

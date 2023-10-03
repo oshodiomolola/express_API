@@ -2,7 +2,7 @@ const express = require('express');
 const itemsRoute = require('./Route/items');
 const bodyParser = require('body-parser');
 const usersRoute = require('./User/user');
-const PORT = 3010;
+const PORT = 4000;
 
 const server = express();
 

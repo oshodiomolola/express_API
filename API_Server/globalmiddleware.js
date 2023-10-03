@@ -60,15 +60,14 @@ function checkRole(req, res, next) {
   console.log("API Key from Request:", apiKey);
   console.log("API Keys from usersObj:", usersObj.map(user => user.api_Key));
 
-  const foundIndex = usersObj.findIndex(user => user.api_Key == apiKey)
-console.log(foundIndex)
-  if (usersObj[foundIndex].role != "admin") {
-    res.status(401).json({
+ const foundUser = userObj.find(user=> user.api_key == apiKey)
+  if (foundUser.user_type != "admin") {
+    return res.status(401).json({
       message: "you are not authorized"
     })
   }
   next()
-}
+};
 
 
 function basicAuth(req, res, next) {
@@ -92,6 +91,16 @@ if (!findUser) {res.status(404).json({
   message: "Can not find user. Invalid username or password"
 })}
   next()  
+};
+
+const checkItem = (req, res, next) => {
+  const items = [adidas, puma]
+  if (items.includes(req.body.name)) {
+    return rmSync.status(406).json ({
+      error: " This item can not be included"
+    })
+  }
+  next ()
 }
 
-module.exports = {checkApiKey, checkRole, basicAuth}
+module.exports = {checkApiKey, checkRole, basicAuth, checkItem}
